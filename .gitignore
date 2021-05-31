@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Hide config
+config.py
+
+#ignore checkpoints & Mac User auto-generated file (Desktop Service Store)
+.DS_Store
+.ipynb_checkpoints
