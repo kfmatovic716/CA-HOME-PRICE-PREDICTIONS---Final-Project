@@ -1,12 +1,12 @@
 # HOME PRICE PREDICTIONS IN CALIFORNIA---Final Project 
 
-Website: <a href="#">Actual Website here</a>
+Website: <a href="#">Actual Website here later</a>
 <br>
 
 <p><h1><img src="/Dashboard/static/images/cat2.jpeg" width=50 height=50 align="middle"/><strong> The PsyCat Learners</strong><br><h3><emp> MEMBERS:  Mohammed Alnaimi  |  Katherine Matovic  |  James Milne  |  Ellis Mok  </emp></h3></h1></p>
 <hr>
 
-![house logo](https://github.com/kfmatovic716/CA-HOME-PRICE-PREDICTIONS---Final-Project/blob/main/Dashboard/static/images/housesel.jpeg?raw=true)
+<img src="/Dashboard/static/images/housesel.jpeg"/>
 
 ## SUBJECT OF DATA EXPLORATION
 ## The effects of unemployment rate and the presence of hospitals around the vicinity to California Home Prices 
@@ -28,21 +28,36 @@ Website: <a href="#">Actual Website here</a>
 </ul>
 
 ## DATA VISUALIZATIONS
-
-### CA map with tooltip 
-
-### Histogram groups data in bins and provides the quickest method to get an idea on the distribution of each attribute in a dataset. It features the center, spread, skewness of the data and can show the presence of outliers and data frequencies. <insert image>
-
-### Scatterplot shows the relationship between two attributes
-
-### Bar charts?
+<ul>
+    <li>CA map with tooltip <insert image></li>
+    <li>Histogram groups data in bins and provides the quickest method to get an idea on the distribution of each attribute in a dataset. It features the center, spread, skewness of the data and can show the presence of outliers and data frequencies. <insert image></li>
+    <li>Scatterplot will show how each attribute relates to the house price <insert image></li>
+    <li>Bar charts? </li>
+</ul>
 
 ## METHODOLOGIES IN DEVELOPING THE MACHINE LEARNING ALGORITHM
-####< James should fill in >
+<ul>
+    <li>Data Preparation</li>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    <li>Data Transformations</li>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    <li>Algorithms used and their outcomes</li>
+        <li></li>
+        <li></li>
+</ul>
 
-## LIBRARIES
+## LIBRARIES & TOOLS
 <ul>
     <li>Python/Pandas</li>
+    <li>Colaboratory</li>
     <li>Flask App</li>
     <li>SQL</li>
     <li>JavaScript</li>
