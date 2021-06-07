@@ -1,0 +1,42 @@
+.col-md-12 {
+	color: green;
+    font-weight: bolder;
+	font-family: Garamond;
+	background-image: url("images/houseselect2.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-left: 50px;
+    height: 380px;
+}
+
+img{
+    padding:0;
+}
+body{
+    background-color: #e6ffe6;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#form {
+    background-color: lightgrey;
+    height: 300px;
+    margin-bottom: 50px;
+    margin-right: 20px;
+    margin-left: 50px;
+    padding-top: 5px;
+}
+
+#mapid {
+    background-color: lightgrey;
+    height: 650px;
+    margin-bottom:50px;
+}
+
+button {
+   text-align: center;
+    margin-top: 20px;
+    margin-left: 30%;
+    border: 3px solid green
+
+}
