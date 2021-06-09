@@ -59,10 +59,11 @@ Website: <a href="#">Actual Website here later</a>
     <li>Python/Pandas</li>
     <li>Colaboratory</li>
     <li>Flask App</li>
-    <li>SQL</li>
+    <li>Tableau</li>
     <li>JavaScript</li>
     <li>Leaflet</li>
-    <li>D3</li>
+    <li>HTML</li>
+    <li>CSS</li>
     <li>Bootstrap</li>
     <li>Jupyter</li>
 </ul>

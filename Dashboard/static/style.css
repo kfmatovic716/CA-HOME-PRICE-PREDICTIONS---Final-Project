@@ -1,4 +1,4 @@
-.col-md-12 {
+#head {
 	color: green;
     font-weight: bolder;
 	font-family: Garamond;
@@ -10,6 +10,10 @@
     height: 380px;
 }
 
+.navbar {
+    height:auto;
+    width: 960px;
+}
 img{
     padding:0;
 }
@@ -40,22 +44,38 @@ button {
 
 }
 
-/* .col-md-8 {   
-    background: rgba(255, 255, 255, .7);
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
-} */
-
 .card {
     padding: 4.5rem;
-    margin: 20px;
+    margin: 10px;
     background: #edc0bf;
     background: linear-gradient(90deg, lightgrey 0, #ffe6cc 58%);
-    /* font-family: 'Inter', sans-serif; */
-    width: 400px;
-    height: auto;
     padding: 2rem;
     border-radius: 1rem;
   }
 
-  
+#team {
+    width: 650px;
+    height: auto;
+    /* background: #dfbf9f; */
+}
+
+#methods {
+    width: 800px;
+    height: auto;
+    /* background: #dfbf9f; */
+    margin-right:10px;
+    margin-top:10px;
+}
+
+#tools, #datainfo {
+    width: 350px;
+    height: auto;
+    /* background: #dfbf9f;  */
+    margin-top:10px;
+    margin-left:15px;
+    margin-bottom:10px;
+}
+
+.github {
+    margin-left:5px;
+}
