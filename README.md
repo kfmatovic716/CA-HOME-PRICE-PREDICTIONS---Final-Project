@@ -8,8 +8,7 @@ Website: <a href="#">Actual Website here later</a>
 
 <img src="/Dashboard/static/images/housesel.jpeg"/>
 
-## SUBJECT OF DATA EXPLORATION
-## The effects of unemployment rate and the presence of hospitals around the vicinity to California Home Prices 
+## California Home Price Prediction by zip code and house type
 <hr>
 
 ## MAIN OBJECTIVES
@@ -50,8 +49,10 @@ Website: <a href="#">Actual Website here later</a>
             <li></li>
         </ul>
     <li>Algorithms used and their outcomes</li>
+    <ul>
         <li></li>
         <li></li>
+    </ul>
 </ul>
 
 ## LIBRARIES & TOOLS
@@ -59,6 +60,7 @@ Website: <a href="#">Actual Website here later</a>
     <li>Python/Pandas</li>
     <li>Colaboratory</li>
     <li>Flask App</li>
+    <li>SQL</li>
     <li>Tableau</li>
     <li>JavaScript</li>
     <li>Leaflet</li>
