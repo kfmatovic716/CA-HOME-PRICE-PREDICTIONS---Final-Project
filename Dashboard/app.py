@@ -6,7 +6,6 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from flask import Flask, render_template, jsonify
-from flask import Flask
 import os
 
 engine = create_engine("postgresql://postgres:postgres@localhost:5432/ca_homeprice_db")
@@ -15,25 +14,25 @@ engine = create_engine("postgresql://postgres:postgres@localhost:5432/ca_homepri
 # Instantiate a Flask app
 app = Flask(__name__)
 
-# Use flask_pymongo to set up mongo connection
-# app.config["MONGO_URI"] = "mongodb://localhost:27017/mars_app"
-# mongo = PyMongo(app)
-
 # Create a base '/' route that will query your mongodb database and render the `index.html` template
 @app.route("/")
 def welcome():
     return render_template('welcome.html')
 
-# Create a '/scrape' route that will create the mars collection, run your scrape() function from scrape_mars, and update the mars collection in the database
-# The route should redirect back to the base route '/' with a code 302.
+
 @app.route("/predictprice")
 def predictprice():
+
     session = Session(bind=engine)
     con = engine.connect()
     ca_homeprice = pd.read_sql("SELECT * FROM ca_homeprice", con)
-    
-    return jsonify(ca_homeprice)
-    # return render_template('predictprice.html')
+
+    ## Comment this out or delete to read in data from database session above
+    # ca_homeprice = pd.read_csv('./static/data/sample_set.csv')
+
+    data = ca_homeprice.to_json(orient='records')
+
+    return render_template('predictprice.html', data=data)
 
 @app.route("/visuals")
 def visuals():
