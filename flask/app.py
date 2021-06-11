@@ -1,32 +1,66 @@
-# import Flask, pymongo, and scrape_mars (your python file)
-from flask import flask, render_template
+from flask import Flask, jsonify, render_template, request, redirect
+import pymongo
 from flask_pymongo import PyMongo
-import scrape_mars
+import pandas as pd
+import json
+# From initdb import create_collection
 
-# Instantiate a Flask app
+#################################################
+# Flask Setup
+#################################################
+# Instantiate a Flask object at __name__, and save it to a variable called app
 app = Flask(__name__)
 
-# Use flask_pymongo to set up mongo connection
-# app.config["MONGO_URI"] = "mongodb://localhost:27017/mars_app"
-# mongo = PyMongo(app)
+#################################################
+# Database Setup
+#################################################
+# setup mongo connection
+mongo = pymongo.MongoClient("mongodb+srv://tesspalan:YSPTuqMosY6PxoXu@cluster0.dhjfw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
-# Create a base '/' route that will query your mongodb database and render the `index.html` template
+db = mongo['climate-dashboard']
+
+#################################################
+# Flask Routes
+#################################################
+# index route
 @app.route("/")
 def index():
-    mars = mongo.db.mars.find_one()
-    return render_template("index.html", mars=mars)
+    return render_template("welcome.html")
 
-# Create a '/scrape' route that will create the mars collection, run your scrape() function from scrape_mars, and update the mars collection in the database
-# The route should redirect back to the base route '/' with a code 302.
-@app.route("/scrape")
-def scrape():
-    mars = mongo.db.mars
-    mars_data = scrape_mars.scrape_all()
-    mars.replace_one({}, mars_data, upsert=True)
-    return "Scraping Successful!"
+# @app.route("emission")
+# def emission():
+#     # results = db.session.query(output.countyName, output.2006...)
+#     # need to add all the jasons 
+#     return jsonify()
 
+@app.route("/visualizations")
+def visualizations():
+    # get the count of total data points
+    # count = list(keywords.find())
+    # print(count)
+    return render_template("visuals.html")
 
-# Run your app
+@app.route("/predict_price")
+def data():
+    return render_template("predictprice.html.html")
+
+@app.route("/keyword_search")
+def keyword_search():
+    results = db.keywords.find_one({}) #query collection pymongo
+    
+    return jsonify(results['data'])
+
+@app.route("/geojson_map")
+def jeojsaon_map():
+    results = db.geojson.find_one({}) #query collection pymongo
+    
+    return jsonify(results['data'])
+
+#@app.route("/geojason")
+# def keyword_search():
+#     results2 = #query collection pymongo
+#     jsonified_resualts2 = #convert to json
+#     return(jsonified_resualts2)
 
 if __name__ == "__main__":
     app.run()
