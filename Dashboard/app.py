@@ -1,7 +1,16 @@
 # import Flask, pymongo, and scrape_mars (your python file)
-from flask import flask, render_template
-from flask_pymongo import PyMongo
-import scrape_mars
+import numpy as np
+import pandas as pd
+import sqlalchemy
+from sqlalchemy.ext.automap import automap_base
+from sqlalchemy.orm import Session
+from sqlalchemy import create_engine, func
+from flask import Flask, render_template, jsonify
+from flask import Flask
+import os
+
+engine = create_engine("postgresql://postgres:postgres@localhost:5432/ca_homeprice_db")
+# engine = create_engine(os.environ.get('DATABASE_URL', ''))
 
 # Instantiate a Flask app
 app = Flask(__name__)
@@ -12,18 +21,31 @@ app = Flask(__name__)
 
 # Create a base '/' route that will query your mongodb database and render the `index.html` template
 @app.route("/")
-def index():
-    mars = mongo.db.mars.find_one()
-    return render_template("index.html", mars=mars)
+def welcome():
+    return render_template('welcome.html')
 
 # Create a '/scrape' route that will create the mars collection, run your scrape() function from scrape_mars, and update the mars collection in the database
 # The route should redirect back to the base route '/' with a code 302.
-@app.route("/scrape")
-def scrape():
-    mars = mongo.db.mars
-    mars_data = scrape_mars.scrape_all()
-    mars.replace_one({}, mars_data, upsert=True)
-    return "Scraping Successful!"
+@app.route("/predictprice")
+def predictprice():
+    session = Session(bind=engine)
+    con = engine.connect()
+    ca_homeprice = pd.read_sql("SELECT * FROM ca_homeprice", con)
+    
+    return jsonify(ca_homeprice)
+    # return render_template('predictprice.html')
+
+@app.route("/visuals")
+def visuals():
+    return render_template('visuals.html')
+
+# @app.route("/team")
+# def team():
+#     return render_template('team.html')
+
+@app.route("/documentation")
+def documentation():
+    return render_template('documentation.html')
 
 
 # Run your app
