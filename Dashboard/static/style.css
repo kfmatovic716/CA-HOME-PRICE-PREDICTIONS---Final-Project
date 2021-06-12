@@ -13,8 +13,8 @@
 .navbar {
     height:auto;
     width: 960px;
-    margin-left: 50px;
-    margin-right:50px
+    margin-left: 80px;
+    margin-right:80px
 }
 
 img{
@@ -63,7 +63,7 @@ button {
 }
 
 #methods {
-    width: 800px;
+    width: 1100px;
     height: auto;
     /* background: #dfbf9f; */
     margin-right:10px;
@@ -84,6 +84,6 @@ button {
 }
 
 /* tableau viz */
-#viz1623472718293, #viz1623474856631 {
+#viz1623472718293, #viz1623510542724 {
     border:rgb(0, 153, 153) 3px solid;
 }

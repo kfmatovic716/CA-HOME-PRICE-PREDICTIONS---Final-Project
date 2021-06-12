@@ -3,7 +3,7 @@
 Website: <a href="#">Actual Website here later</a>
 <br>
 
-<p><h1><img src="/Dashboard/static/images/cat2.jpeg" width=50 height=50 align="middle"/><strong> The PsyCat Learners</strong><br><h3><emp> MEMBERS:  Mohammed Alnaimi  |  Katherine Matovic  |  James Milne  |  Ellis Mok  </emp></h3></h1></p>
+<p><h1><img src="/Dashboard/static/images/cat2.jpeg" width=50 height=50 align="middle"/><strong> The PsyCat Learners</strong><br><h3><emp> MEMBERS:  James Milne |  Katherine Matovic  |  Ellis Mok |  Mohammed Alnaimi </emp></h3></h1></p>
 <hr>
 
 <img src="/Dashboard/static/images/housesel.jpeg"/>
@@ -30,8 +30,7 @@ Website: <a href="#">Actual Website here later</a>
 <ul>
     <li>CA map with tooltip <insert image></li>
     <li>Histogram groups data in bins and provides the quickest method to get an idea on the distribution of each attribute in a dataset. It features the center, spread, skewness of the data and can show the presence of outliers and data frequencies. <insert image></li>
-    <li>Scatterplot will show how each attribute relates to the house price <insert image></li>
-    <li>Bar charts? </li>
+    <li>Bar charts that shows the average house prices by county </li>
 </ul>
 
 ## METHODOLOGY FOR THE MACHINE LEARNING ALGORITHM
