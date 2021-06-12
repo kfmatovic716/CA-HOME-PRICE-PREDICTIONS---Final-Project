@@ -8,7 +8,10 @@ from sqlalchemy import create_engine, func
 from flask import Flask, render_template, jsonify
 import os
 
-engine = create_engine("postgresql://postgres:postgres@localhost:5432/ca_homeprice_db")
+# Use this to run via Flask. Uncomment this line if running Heroku
+engine = create_engine("postgresql://postgres:Sofija53!@localhost:5432/ca_homeprice_db")
+
+# Use this for Heroku. Uncomment line 12 when using this 
 # engine = create_engine(os.environ.get('DATABASE_URL', ''))
 
 # Instantiate a Flask app

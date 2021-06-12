@@ -25,7 +25,7 @@ var button = d3.select("#button");
 // Select the form
 var form = d3.select("#form");
 
-var testData 
+
 // Create the function to run for both events
 function runFind() {
 
@@ -40,18 +40,17 @@ function runFind() {
   var inputCounty = d3.select("#example-form-input1").property("value");
   var inputHouseType = d3.select("#example-form-input2").property("value");
 
-  // Filtering data
-  var filteredCounty = data.filter(rowItem => rowItem.county === inputCounty)
-                           .filter(rowItem => rowItem.house_type === inputHouseType)
+  // Filtering data. Used trim() because county names have additional space after the neme. Can be fixed later 
+  var filteredCounty = data.filter(rowItem => rowItem.county.trim() == inputCounty)
+                            .filter(rowItem => rowItem.house_type === inputHouseType)
   
-  // testData = filteredCounty
 
   console.log(filteredCounty)
   console.log(filteredCounty.map(rowItem => rowItem.lat))
 
   filteredCounty.forEach(function(rowItem) {
     markers.addLayer(L.marker([rowItem.lat, rowItem.lng])
-                    .bindPopup("<h3>" + rowItem.zipcode + "</h3> <hr> <h4>Estimated Home Price: " + rowItem.est_price + "</h4>"))
+                    .bindPopup("<h4>Zip Code: " + rowItem.zipcode + "</h4> <hr> <h5>Estimated Home Price: $ " + rowItem.est_price + "</h5>"))
   })
 
     
