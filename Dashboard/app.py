@@ -1,4 +1,4 @@
-# import Flask, pymongo, and scrape_mars (your python file)
+
 import numpy as np
 import pandas as pd
 import sqlalchemy
@@ -14,7 +14,7 @@ engine = create_engine("postgresql://postgres:postgres@localhost:5432/ca_homepri
 # Instantiate a Flask app
 app = Flask(__name__)
 
-# Create a base '/' route that will query your mongodb database and render the `index.html` template
+
 @app.route("/")
 def welcome():
     return render_template('welcome.html')
@@ -38,9 +38,9 @@ def predictprice():
 def visuals():
     return render_template('visuals.html')
 
-# @app.route("/team")
-# def team():
-#     return render_template('team.html')
+@app.route("/team")
+def team():
+    return render_template('team.html')
 
 @app.route("/documentation")
 def documentation():

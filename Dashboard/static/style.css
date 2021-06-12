@@ -13,6 +13,7 @@
 .navbar {
     height:auto;
     width: 960px;
+    margin-left: 100px;
 }
 img{
     padding:0;
