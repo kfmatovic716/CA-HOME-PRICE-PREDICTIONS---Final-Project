@@ -13,8 +13,10 @@
 .navbar {
     height:auto;
     width: 960px;
-    margin-left: 100px;
+    margin-left: 50px;
+    margin-right:50px
 }
+
 img{
     padding:0;
 }
@@ -79,4 +81,9 @@ button {
 
 .github {
     margin-left:5px;
+}
+
+/* tableau viz */
+#viz1623472718293, #viz1623474856631 {
+    border:rgb(0, 153, 153) 3px solid;
 }
