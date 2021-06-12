@@ -51,7 +51,7 @@ function runFind() {
 
   filteredCounty.forEach(function(rowItem) {
     markers.addLayer(L.marker([rowItem.lat, rowItem.lng])
-                    .bindPopup("<h3>" + rowItem.zipcode + "</h3> <hr> <h4>Estimated Home Price: " + rowItem.est_price + "</h4>"))
+                    .bindPopup("<h3>Zip Code:" + rowItem.zipcode + "</h3> <hr> <h4>Estimated Home Price: " + rowItem.est_price + "</h4>"))
   })
 
     

@@ -3,7 +3,7 @@
 Website: <a href="#">Actual Website here later</a>
 <br>
 
-<p><h1><img src="/Dashboard/static/images/cat2.jpeg" width=50 height=50 align="middle"/><strong> The PsyCat Learners</strong><br><h3><emp> MEMBERS:  Mohammed Alnaimi  |  Katherine Matovic  |  James Milne  |  Ellis Mok  </emp></h3></h1></p>
+<p><h1><img src="/Dashboard/static/images/cat2.jpeg" width=50 height=50 align="middle"/><strong> The PsyCat Learners</strong><br><h3><emp> MEMBERS:  James Milne |  Katherine Matovic  |  Ellis Mok |  Mohammed Alnaimi </emp></h3></h1></p>
 <hr>
 
 <img src="/Dashboard/static/images/housesel.jpeg"/>
@@ -30,30 +30,33 @@ Website: <a href="#">Actual Website here later</a>
 <ul>
     <li>CA map with tooltip <insert image></li>
     <li>Histogram groups data in bins and provides the quickest method to get an idea on the distribution of each attribute in a dataset. It features the center, spread, skewness of the data and can show the presence of outliers and data frequencies. <insert image></li>
-    <li>Scatterplot will show how each attribute relates to the house price <insert image></li>
-    <li>Bar charts? </li>
+    <li>Bar charts that shows the average house prices by county </li>
 </ul>
 
-## METHODOLOGIES IN DEVELOPING THE MACHINE LEARNING ALGORITHM
-<ul>
-    <li>Data Preparation</li>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    <li>Data Transformations</li>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    <li>Algorithms used and their outcomes</li>
-    <ul>
-        <li></li>
-        <li></li>
-    </ul>
-</ul>
+## METHODOLOGY FOR THE MACHINE LEARNING ALGORITHM
+<h4><strong>Data Description</strong></h4>
+                <ul>
+                    <li>The real estate website Zillow has a variety of free smoothed, seasonally adjusted datasets of monthly home prices gathered from Multiple Listing Services (MLS's) and presented as an index by zip code for every state in the US stretching
+                        back to 1996. </li>
+                    <li>We selected all California zip codes (1,746) with a monthly look-back of three years (2018-2021) for 1 bdrm - 5 bdrm, single family homes, and condos.</li>
+                </ul>
+                <h4><strong>Data Transformations</strong></h4>
+                <ul>
+                    <li>Many zip codes in California in locales such as Orange County, the Bay Area or San Diego had average prices greater than $750,000. We scaled the data by dividing each observation by $1,000,000, to improve the model's speed and remove
+                        any impacts of higher vs lower priced homes. Once the model had trained, we reversed the effect of the scaling by multiplying the observations by $1,000,000.</li>
+                    <li>Other transformations e.g. Standard Scaler or MinMax were tried but had no impact on model speed.</li>
+                </ul>
+                <h4><strong>Assumptions</strong></h4>
+                <ul>
+                    <li>Machine learning models do not perform with blank cells. Blanks occurred because some MLS's began to report pricing after certain periods e.g. 2003.</li>
+                    <li>To remove blanks, we assigned a blank cell a value equal to to value in the same zip code 12 months later.</li>
+                </ul>
+                <h4><strong>Machine Learning Model Methodology</strong></h4>
+                <ul>
+                    <li>We divided the data into three parts: a training set comprising approximately 1,200 rows, a validation set comprising approximately 1-200 rows with the remainder comprising the test set.</li>
+                    <li>The random seed value was set to 42 to make our model repeatable. Using an Long Short Term Memory model (LSTM) we added 3 layers with 128 neurons, trained over a period of 100 epochs. We note that we experimented with other layer combinations
+                        and ranges of epochs from 50 to 300 but settled on 100 to reduce the risk of over-fitting.</li>
+                </ul>
 
 ## LIBRARIES & TOOLS
 <ul>

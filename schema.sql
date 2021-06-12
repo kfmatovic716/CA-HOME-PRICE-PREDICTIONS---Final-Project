@@ -8,7 +8,7 @@ CREATE TABLE "ca_homeprice" (
     "est_price" DEC NOT NULL,
     "zipcode" INT,
     "lat"  DEC,
-    "lng" DEC,
+    "lng" DEC
 );
     
 SELECT 
