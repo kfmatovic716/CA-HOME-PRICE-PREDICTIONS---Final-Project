@@ -29,15 +29,17 @@ Website: <a href="#">Actual Website here later</a>
 ## DATA VISUALIZATIONS
 <ul>
     <li>CA map with tooltip </li>
-    <p align="right" width="100%">
+    <p align="center" width="100%">
     <img src="/Dashboard/static/images/map.PNG"/>
     </p>
         <li>Histogram groups data in bins and provides the quickest method to get an idea on the distribution of each attribute in a dataset. It features the center, spread, skewness of the data and can show the presence of outliers and data frequencies. </li>
-    <p align="right" width="100%">
+    <p align="center" width="100%">
     <img src="/Dashboard/static/images/histogram.PNG"/>
     </p>
     <li>Bar charts that shows the average house prices by county </li>
+    <p align="center" width="100%">
     <img src="/Dashboard/static/images/bar.PNG"/>
+    </p>
 </ul>
 
 ## METHODOLOGY FOR THE MACHINE LEARNING ALGORITHM
