@@ -27,12 +27,13 @@ body{
 
 #form {
     background-color: lightgrey;
-    height: 300px;
+    height: 350px;
     margin-bottom: 50px;
     margin-right: 20px;
     margin-left: 50px;
     padding-top: 5px;
 }
+
 
 #map {
     height: 800px;
@@ -56,6 +57,13 @@ button {
     border-radius: 1rem;
   }
 
+
+.form-select {
+    width: 150px;
+    height: 40px;
+    background-color: whitesmoke;
+}
+
 #team {
     width: 650px;
     height: auto;
@@ -70,8 +78,13 @@ button {
     margin-top:10px;
 }
 
+.form-floating {
+    margin-top: 20px;
+}
+
+
 #tools, #datainfo {
-    width: 350px;
+    width: 400px;
     height: auto;
     /* background: #dfbf9f;  */
     margin-top:10px;

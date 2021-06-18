@@ -3,7 +3,7 @@
 Website: <a href="#">Actual Website here later</a>
 <br>
 
-<p><h1><img src="/Dashboard/static/images/cat2.jpeg" width=50 height=50 align="middle"/><strong> The PsyCat Learners</strong><br><h3><emp> MEMBERS:  James Milne |  Katherine Matovic  |  Ellis Mok |  Mohammed Alnaimi </emp></h3></h1></p>
+<p><h1><img src="/Dashboard/static/images/cat2.jpeg" width=50 height=50 align="middle"/><strong> The PsyCat Learners</strong><br><h3><emp> MEMBERS:  James Milne |  Katherine Matovic  |  Ellis Mok </emp></h3></h1></p>
 <hr>
 
 <img src="/Dashboard/static/images/housesel.jpeg"/>
