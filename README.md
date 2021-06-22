@@ -57,7 +57,7 @@ Website: <a href="#">Actual Website here later</a>
                 </ul>
                 <h4><strong>Assumptions</strong></h4>
                 <ul>
-                    <li>Machine learning models do not perform with blank cells. Blanks occurred because some MLS's began to report pricing after certain periods e.g. 2003.</li>
+                    <li>Machine learning models do not perform with blank cells. These can occur because some MLS's began to report pricing after certain periods e.g. 2003.</li>
                     <li>To remove blanks, we assigned a blank cell a value equal to to value in the same zip code 12 months later.</li>
                 </ul>
                 <h4><strong>Machine Learning Model Methodology</strong></h4>
@@ -66,6 +66,11 @@ Website: <a href="#">Actual Website here later</a>
                     <li>The random seed value was set to 42 to make our model repeatable. Using an Long Short Term Memory model (LSTM) we added 3 layers with 128 neurons, trained over a period of 100 epochs. We note that we experimented with other layer combinations
                         and ranges of epochs from 50 to 300 but settled on 100 to reduce the risk of over-fitting.</li>
                 </ul>
+                  </ul>
+                <h4><strong>Results</strong></h4>
+                <ul>
+                    <li>Overall our model underestimated the values in each of the California counties by an average of about 7%. This was in contrast to the overall upward trend of the pricing index which would have forecast an upward trend of anywhere from 5-10% year over year. The overall Mean squared error on our testing datasets was just under 5%. </li>
+                    <li>The reason for our model shortcomings likely stems from the difficulty the model faced in projecting a large number of varying time series, rather than  a number of observations from a single time series. Perhaps with more data points in future, or additional features, we may be able to resolve these issues.</li>
 
 ## LIBRARIES & TOOLS
 <ul>
