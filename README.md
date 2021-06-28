@@ -69,7 +69,7 @@ Website: <a href="#">https://ca-home-price-predict.herokuapp.com/</a>
                   </ul>
                 <h4><strong>Results and final thoughts</strong></h4>
                 <ul>
-                    <li>Overall our model underestimated the values in each of the California counties by an average of about 7%. This was in contrast to the overall upward trend of the pricing index which would have forecast an upward trend of anywhere from 5-10% year over year. The overall Mean squared error on our testing datasets was just under 5%. The overall loss function averaged 10% for the validation data set, but around 33% for the training data set, indicating our training model could still be improved.</li>
+                    <li>Overall our model underestimated the values in each of the California counties by an average of about 7%. This was in contrast to the overall upward trend of the pricing index which would have forecast an upward trend of anywhere from 5-10% year over year. The overall Mean squared error on our testing datasets was just under 5%. The overall loss function averaged 0.10 for the validation data set, but around 0.33 for the training data set, indicating our training model fit fairly well but could still be improved.</li>
                     <li>The reason for our model shortcomings likely stems from the difficulty the model faced in projecting a large number of varying time series over each zip code, rather than  a large number of observations from a single time series (as would be the case for a financial time series. Perhaps with more data points in future, or additional features, we may be able to resolve these issues.</li>
 
 ## LIBRARIES & TOOLS
