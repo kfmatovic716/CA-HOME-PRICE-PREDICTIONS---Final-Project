@@ -56,8 +56,8 @@ Website: <a href="#">https://ca-home-price-predict.herokuapp.com/</a>
                 </ul>
                 <h4><strong>Assumptions</strong></h4>
                 <ul>
-                    <li>We note that machine learning models do not perform with blank data points. These can occur because some MLS's began to report pricing after certain periods e.g. 2003.</li>
-                    <li>To remove blanks, we assigned a blank cell a value equal to to value in the same zip code 12 months later.</li>
+                    <li>We note that machine learning models do not perform with blank data points. These can occur because some MLS's began reporting pricing data at different periods. Through an examination of the data, we found that the majority of the MLS's reported results approximately 3 years prior to the current period and that became the basis for our selection window. </li>
+                    <li>To remove any remaining blanks, we assigned a blank cell a value equal to to value in the same zip code 12 months later.</li>
                 </ul>
                 <h4><strong>Machine Learning Model Methodology</strong></h4>
                 <ul>
