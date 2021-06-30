@@ -61,14 +61,14 @@ Website: <a href="#">https://ca-home-price-predict.herokuapp.com/</a>
                 </ul>
                 <h4><strong>Machine Learning Model Methodology</strong></h4>
                 <ul>
-                    <li>We divided the data into three parts: a training set comprising approximately 1,200 rows, a validation set comprising approximately 1-200 rows with the remainder comprising the test set.</li>
-                    <li>The random seed value was set to 42 to make our model repeatable. Using an Long Short Term Memory model (LSTM) we added 2 hidden layers with 128 neurons, trained over a period of 100 epochs and used the default learning rate of 0.001. We note that we experimented with other layer combinations
+                    <li>We divided the data into three parts: a training set comprising approximately 1,200 rows, a validation set comprising approximately 1-200 rows with the remainder comprising the test set. Our first model was a simple linear regression. This model was found to have a Mean Squared Error (MSE) of about 0.77.</li>
+                    <li>The random seed value was set to 42 to make our model repeatable. Using an Long Short Term Memory model (LSTM) we added 2 hidden layers with 128 neurons, initially trained over a period of 20 epochs and used the default learning rate of 0.001. We note that we experimented with other layer combinations
                         and ranges of epochs from 5 to 20 but settled on 6 to reduce the risk of over-fitting.</li>
                 </ul>
                   </ul>
                 <h4><strong>Results and final thoughts</strong></h4>
                 <ul>
-                    <li>Overall our model underestimated the values in each of the California counties by an average of about 7% YoY. This was in contrast to the overall upward trend of the pricing index which would have projected an upward trend of anywhere from 5-10% year over year. The overall Mean squared error on our testing datasets was just under 5%. The overall loss function averaged 0.10 for the validation data set, but around 0.33 for the training data set (unscaled), indicating our training model fit fairly well but could still be improved.</li>
+                    <li>Overall our model underestimated the values in each of the California counties by an average of about 7% YoY. This was in contrast to the overall upward trend of the pricing index which would have projected an upward trend of anywhere from 5-10% year over year. The overall MSE on our testing datasets was just under 0.05. The overall loss function averaged 0.10 for the validation data set, but around 0.33 for the training data set (unscaled), indicating our training model fit fairly well but could still be improved.</li>
                     <li>The reason for our model shortcomings likely stems from the difficulty the model faced in projecting a large number of varying time series over each zip code, rather than  a large number of observations from a single time series (as would be the case for a financial time series. Perhaps with more data points in future, or additional features, we may be able to resolve these issues.</li>
 
 ## LIBRARIES & TOOLS
