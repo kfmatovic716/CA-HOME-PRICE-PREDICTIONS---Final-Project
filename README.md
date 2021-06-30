@@ -22,7 +22,6 @@ Website: <a href="#">https://ca-home-price-predict.herokuapp.com/</a>
 ## DATA SOURCES
 <ul>
     <li>House Price data - <a href="https://www.zillow.com/research/data/ ">Zillow website</a></li>
-    <li>Hospital Ratings data - <a href="https://www.kaggle.com/center-for-medicare-and-medicaid/hospital-ratings ">Kaggle </a></li>
     <li>Unemployment Data - <a href="https://data.edd.ca.gov/Labor-Force-and-Unemployment-Rates/Local-Area-Unemployment-Statistics-LAUS-/e6gw-gvii">Socrata API</li>
 </ul>
 
@@ -47,7 +46,7 @@ Website: <a href="#">https://ca-home-price-predict.herokuapp.com/</a>
                 <ul>
                     <li>The real estate website Zillow has a variety of free smoothed, seasonally adjusted datasets of monthly home prices gathered from Multiple Listing Services (MLS's) and presented as an index by zip code for every state in the US stretching
                         back to 1996. </li>
-                    <li>We selected all California zip codes (1,746) with a monthly look-back of three years (2018-2021) for 1 bdrm - 5 bdrm, single family homes, and condos.</li>
+                    <li>We selected all California zip codes (1,746 zips/58 counties) with a monthly look-back of three years (2018-2021) for 1 bdrm - 5 bdrm, single family homes, and condos.</li>
                 </ul>
                 <h4><strong>Data Transformations</strong></h4>
                 <ul>
@@ -63,7 +62,7 @@ Website: <a href="#">https://ca-home-price-predict.herokuapp.com/</a>
                 <h4><strong>Machine Learning Model Methodology</strong></h4>
                 <ul>
                     <li>We divided the data into three parts: a training set comprising approximately 1,200 rows, a validation set comprising approximately 1-200 rows with the remainder comprising the test set.</li>
-                    <li>The random seed value was set to 42 to make our model repeatable. Using an Long Short Term Memory model (LSTM) we added 3 layers with 128 neurons, trained over a period of 100 epochs and used the default learning rate of 0.001. We note that we experimented with other layer combinations
+                    <li>The random seed value was set to 42 to make our model repeatable. Using an Long Short Term Memory model (LSTM) we added 2 hidden layers with 128 neurons, trained over a period of 100 epochs and used the default learning rate of 0.001. We note that we experimented with other layer combinations
                         and ranges of epochs from 5 to 20 but settled on 6 to reduce the risk of over-fitting.</li>
                 </ul>
                   </ul>
